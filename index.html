@@ -1,18 +1,91 @@
-<h1>Hey Baby, it's your birthday!! 🥳</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Happy Birthday</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, #fff3f3, #ffeaea);
+      color: #333;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      padding: 20px;
+    }
 
-<p>Writing you a birthday message is actually kinda hard — not because I don’t know what to say, but because there’s way too much I could say in one short letter.</p>
+    h1 {
+      font-size: 2em;
+      margin-bottom: 20px;
+      color: #d62828;
+    }
 
-<p>What I do want to say is how in awe I am of you — your character, your values, your joyful softness, and the person you’re constantly growing into. You’re becoming such a strong, smart, compassionate woman… and I honestly can’t wait to see what your next steps in life look like.</p>
+    .content {
+      display: none;
+      max-width: 700px;
+      background: #ffffffcc;
+      border-radius: 15px;
+      padding: 30px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
 
-<p>Also, you’re just a full-on vibe. Your energy is always on point — no matter the day, time, or chaos around you. You lift me up constantly, even when I’m too stubborn to lift myself. (Still wild how you manage that, considering my love language is messing with you 24/7.)</p>
+    button {
+      font-size: 1.2em;
+      padding: 10px 25px;
+      border: none;
+      border-radius: 10px;
+      background-color: #ff5c5c;
+      color: white;
+      cursor: pointer;
+      transition: background 0.3s ease;
+      margin-bottom: 30px;
+    }
 
-<p>I love all the time we spend together and the things we do for each other. The way you automatically smile at me just because I exist. Or when you prep a Skyr bowl before I even get the chance to. It’s really the little things, always.</p>
+    button:hover {
+      background-color: #e04a4a;
+    }
 
-<p>I could write pages about you — your personality, your traits, your quirks — but I’ll save the rest for when I’m yapping to you in person later.</p>
+    .footer {
+      margin-top: 30px;
+      font-weight: bold;
+    }
 
-<p><strong>So: Happy 22nd Birthday, and Happy 1-Year Anniversary ❤️</strong></p>
+    p {
+      line-height: 1.6;
+      margin-bottom: 15px;
+    }
+  </style>
+</head>
+<body>
 
-<p>This year flew by… but I look back at it with so much love and fondness.</p>
+  <button onclick="document.querySelector('.content').style.display='block'; this.style.display='none';">
+    Open Me
+  </button>
 
-<div class="footer">Love you always,<br>Wafi ❤️</div>
+  <div class="content">
+    <h1>Hey Baby, it's your birthday!! 🥳</h1>
+
+    <p>Writing you a birthday message is actually kinda hard — not because I don’t know what to say, but because there’s way too much I could say in one short letter.</p>
+
+    <p>What I do want to say is how in awe I am of you — your character, your values, your joyful softness, and the person you’re constantly growing into. You’re becoming such a strong, smart, compassionate woman… and I honestly can’t wait to see what your next steps in life look like.</p>
+
+    <p>Also, you’re just a full-on vibe. Your energy is always on point — no matter the day, time, or chaos around you. You lift me up constantly, even when I’m too stubborn to lift myself. (Still wild how you manage that, considering my love language is messing with you 24/7.)</p>
+
+    <p>I love all the time we spend together and the things we do for each other. The way you automatically smile at me just because I exist. Or when you prep a Skyr bowl before I even get the chance to. It’s really the little things, always.</p>
+
+    <p>I could write pages about you — your personality, your traits, your quirks — but I’ll save the rest for when I’m yapping to you in person later.</p>
+
+    <p><strong>So: Happy 22nd Birthday, and Happy 1-Year Anniversary ❤️</strong></p>
+
+    <p>This year flew by… but I look back at it with so much love and fondness.</p>
+
+    <div class="footer">Love you always,<br>Wafi ❤️</div>
+  </div>
+
+</body>
+</html>
 
