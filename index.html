@@ -2,90 +2,140 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Happy Birthday</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Happy Birthday ❤️</title>
   <style>
     body {
       margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background: linear-gradient(135deg, #fff3f3, #ffeaea);
+      padding: 0;
+      overflow: hidden;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       color: #333;
       display: flex;
-      flex-direction: column;
-      align-items: center;
       justify-content: center;
-      min-height: 100vh;
-      padding: 20px;
+      align-items: center;
+      height: 100vh;
+      flex-direction: column;
+      background: linear-gradient(to right, #ffe0ec, #d9e4f5);
     }
 
-    h1 {
-      font-size: 2em;
-      margin-bottom: 20px;
-      color: #d62828;
+    .hearts {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      z-index: 0;
     }
 
-    .content {
+    .heart {
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background: red;
+      transform: rotate(45deg);
+      animation: float 8s linear infinite;
+      opacity: 0.6;
+    }
+
+    .heart::before,
+    .heart::after {
+      content: '';
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background: red;
+      border-radius: 50%;
+    }
+
+    .heart::before {
+      top: -10px;
+      left: 0;
+    }
+
+    .heart::after {
+      left: -10px;
+      top: 0;
+    }
+
+    @keyframes float {
+      0% {
+        transform: translateY(100vh) rotate(45deg);
+      }
+      100% {
+        transform: translateY(-10vh) rotate(45deg);
+      }
+    }
+
+    .container {
+      background: white;
+      padding: 2rem;
+      border-radius: 1.5rem;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+      max-width: 600px;
       display: none;
-      max-width: 700px;
-      background: #ffffffcc;
-      border-radius: 15px;
-      padding: 30px;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      margin: 1rem;
+      z-index: 1;
     }
 
     button {
-      font-size: 1.2em;
-      padding: 10px 25px;
-      border: none;
-      border-radius: 10px;
-      background-color: #ff5c5c;
+      background-color: #ff4d6d;
       color: white;
+      border: none;
+      padding: 1rem 2rem;
+      font-size: 1.2rem;
+      border-radius: 0.75rem;
       cursor: pointer;
-      transition: background 0.3s ease;
-      margin-bottom: 30px;
+      margin-bottom: 1rem;
+      z-index: 1;
     }
 
     button:hover {
-      background-color: #e04a4a;
-    }
-
-    .footer {
-      margin-top: 30px;
-      font-weight: bold;
-    }
-
-    p {
-      line-height: 1.6;
-      margin-bottom: 15px;
+      background-color: #e6445f;
     }
   </style>
 </head>
 <body>
 
-  <button onclick="document.querySelector('.content').style.display='block'; this.style.display='none';">
-    Open Me
+  <div class="hearts">
+    <!-- Generate multiple hearts at different positions -->
+    <script>
+      for (let i = 0; i < 30; i++) {
+        const heart = document.createElement('div');
+        heart.classList.add('heart');
+        heart.style.left = Math.random() * 100 + 'vw';
+        heart.style.animationDuration = 5 + Math.random() * 5 + 's';
+        heart.style.opacity = 0.2 + Math.random() * 0.8;
+        document.querySelector('.hearts').appendChild(heart);
+      }
+    </script>
+  </div>
+
+  <button onclick="document.querySelector('.container').style.display='block'; this.style.display='none';">
+    Open Me 💌
   </button>
 
-  <div class="content">
-    <h1>Hey Baby, it's your birthday!! 🥳</h1>
+  <div class="container">
+    <p><strong>Hey Baby, it's your birthday!!</strong> 🎉</p>
 
-    <p>Writing you a birthday message is actually kinda hard — not because I don’t know what to say, but because there’s way too much I could say in one short letter.</p>
+    <p>I find writing you a happy birthday wish hard because there’s simply too much I could say in such a small letter.</p>
 
-    <p>What I do want to say is how in awe I am of you — your character, your values, your joyful softness, and the person you’re constantly growing into. You’re becoming such a strong, smart, compassionate woman… and I honestly can’t wait to see what your next steps in life look like.</p>
+    <p>Nonetheless, I want to say how in awe I am of your character, your principles, your soft yet joyful persona, and the person you’re becoming. You're growing into a great, smart, compassionate woman and I can't wait to see your next steps...</p>
 
-    <p>Also, you’re just a full-on vibe. Your energy is always on point — no matter the day, time, or chaos around you. You lift me up constantly, even when I’m too stubborn to lift myself. (Still wild how you manage that, considering my love language is messing with you 24/7.)</p>
+    <p>You're a good vibe at all times :) you have a great energy no matter what time, day, or situation you find yourself in, and you lift me up constantly — even when I find it hard to lift myself up (although I don’t know how you do that considering my love language is fucking w you 24/7).</p>
 
-    <p>I love all the time we spend together and the things we do for each other. The way you automatically smile at me just because I exist. Or when you prep a Skyr bowl before I even get the chance to. It’s really the little things, always.</p>
+    <p>I love the time we spend together and the things we do for each other — the way you auto-smile at me for absolutely no reason other than me just existing, or when you prep a skyr bowl before I get the chance to do so… it’s the little things.</p>
 
-    <p>I could write pages about you — your personality, your traits, your quirks — but I’ll save the rest for when I’m yapping to you in person later.</p>
+    <p>I could go on and on for hours about your personality, your traits, your qualities, but I will stop here for now… I will yap to u when I see you.</p>
 
-    <p><strong>So: Happy 22nd Birthday, and Happy 1-Year Anniversary ❤️</strong></p>
+    <p><strong>On that note: Happy 22nd Birthday, and Happy 1-Year Anniversary!</strong></p>
 
-    <p>This year flew by… but I look back at it with so much love and fondness.</p>
+    <p>It went by so quickly — but I look back at it with a lot of fondness.</p>
 
-    <div class="footer">Love you always,<br>Wafi ❤️</div>
+    <p><strong>Love you,<br>Wafi ❤️</strong></p>
   </div>
 
 </body>
 </html>
+
+
 
